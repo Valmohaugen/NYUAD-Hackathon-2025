@@ -1,4 +1,4 @@
-```# 🧠 NeurotiQ — Quantum Machine Learning for EEG Signal Analysis  
+# 🧠 NeurotiQ — Quantum Machine Learning for EEG Signal Analysis  
 **NYUAD Social Impact Hackathon 2025**  
 
 ---
@@ -75,4 +75,4 @@ The datasets used for this project are sourced from the following studies:
 ---
 
 ## About the Team  
-We are **Team NeurotiQ**, a passionate group of innovators from NYU Abu Dhabi, united by our commitment to advancing mental health solutions through cutting-edge technology.```
+We are **Team NeurotiQ**, a passionate group of innovators from NYU Abu Dhabi, united by our commitment to advancing mental health solutions through cutting-edge technology.
