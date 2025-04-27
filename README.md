@@ -39,11 +39,11 @@ We have developed and rigorously tested **four models** to date:
 ## Datasets  
 The datasets used for this project are sourced from the following studies:  
 
-1. **Dataset 1:** [Link to Paper 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC10914922/pdf/10916_2024_Article_2048.pdf)  
-   *(Anxiety Dataset)*  
+1. **Dataset 1:** [Link to Data ](https://www.kaggle.com/datasets/danielesayuriono/eeg-signals-for-anxiety-levels-detection)  
+   *(Anxiety Dataset 01)*  
 
 2. **Dataset 2:** [Link to Paper 2](https://zenodo.org/records/13690792)  
-   *(Depression Dataset)*  
+   *(Anxiety Dataset 02)*  
 
 ---
 
