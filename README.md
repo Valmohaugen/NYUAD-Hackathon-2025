@@ -39,11 +39,11 @@ We have developed and rigorously tested **four models** to date:
 ## Datasets  
 The datasets used for this project are sourced from the following studies:  
 
-1. **Dataset 1:** [Link to Paper 1](#)  
-   *(Brief description of what this dataset includes and how it supports the research, e.g., EEG signals associated with mental health conditions.)*  
+1. **Dataset 1:** [Link to Paper 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC10914922/pdf/10916_2024_Article_2048.pdf)  
+   *(Anxiety Dataset)*  
 
-2. **Dataset 2:** [Link to Paper 2](#)  
-   *(Brief description of what this dataset includes, focusing on its relevance to the study.)*  
+2. **Dataset 2:** [Link to Paper 2](https://zenodo.org/records/13690792)  
+   *(Depression Dataset)*  
 
 ---
 
