@@ -70,6 +70,8 @@ The datasets used for this project are sourced from the following studies:
 - 🏥 **Easy Sharing**: Allows users to share results with doctors or family, or save for later.  
 - 🔒 **Privacy First**: No sensitive data storage; real-time analysis on your device.  
 
+Website: https://neurotiq.vercel.app/
+
 ### Installation  
 
 1. **Clone the repository**:  
