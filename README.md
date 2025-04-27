@@ -50,8 +50,8 @@ The datasets used for this project are sourced from the following studies:
 ## Results  
 | **Model**           | **Anxiety AUC** | **Depression AUC** |  **Anxiety Accuracy**  | **Depression Accuracy**|  
 |----------------------|-----------------|--------------------|------------------------|------------------------|  
-| **Classical Models** | ~49%            | ~49%               | ~39%                   | ~69%                   |  
-| **QSVM**             | **79%**         | **73%**            | ~81%                   | ~70%                   |  
+| **Classical Models** |  68%            |  68%               |  38%                   |  69%                   |  
+| **QSVM**             | **79%**         | **73%**            | **81%**                | **70%**                |  
 
 ✅ Our performance findings demonstrate the **superiority of quantum-enhanced models**, underlining their potential for impactful applications in mental health diagnostics.  
 
