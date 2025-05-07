@@ -1,8 +1,9 @@
-# 🧠 NeurotiQ — Quantum ML for EEG Analysis  
+# 🧠 NeurotiQ — Quantum ML for EEG Analysis: Analyzing EEG Brain Signals Using Quantum Support Vector Machines
 **NYUAD Social Impact Hackathon 2025**  
 
 ## Overview  
-NeurotiQ leverages **Quantum Machine Learning (QML)** to improve EEG-based diagnosis of depression, ADHD, and anxiety. Our quantum models identify neurological patterns missed by classical approaches.  
+
+NeurotiQ leverages **Quantum Machine Learning (QML)** to improve EEG-based diagnosis of depression and anxiety. Our quantum models identify neurological patterns missed by classical approaches.  
 
 **Core Tech:** `Qiskit`, `PennyLane`, `TensorFlow`, `Scikit-learn`  
 
@@ -11,8 +12,9 @@ NeurotiQ leverages **Quantum Machine Learning (QML)** to improve EEG-based diagn
 ## Key Components  
 ### 🔬 Models  
 **Quantum (QML):**  
-- **QNN:** Quantum Neural Network with amplitude encoding + hybrid architecture  
-- **QSVM:** Quantum kernel for enhanced separability  
+- **QSVM:** Quantum kernel for enhanced separability  (Main Model)
+- **QNN:** Quantum Neural Network with amplitude encoding + hybrid architecture  (For Benchmarking reasons)
+
 
 **Classical (Baseline):**  
 - SVM & Logistic Regression  
@@ -32,6 +34,7 @@ NeurotiQ leverages **Quantum Machine Learning (QML)** to improve EEG-based diagn
 ## 🚀 Brain Waves Analyzer App  
 **Web App:** [neurotiq.vercel.app](https://neurotiq.vercel.app/)  
 AI-powered mental health analysis with GPT-4 integration.  
+![Alt text](NeutoriQ.png)
 
 ### Features  
 - EEG-based diagnosis for 5 conditions  
