@@ -34,12 +34,14 @@ NeurotiQ leverages **Quantum Machine Learning (QML)** to improve EEG-based diagn
 ## 🚀 Brain Waves Analyzer App  
 **Web App:** [neurotiq.vercel.app](https://neurotiq.vercel.app/)  
 AI-powered mental health analysis with GPT-4 integration.  
-![Alt text](NeutoriQ.png)
-
 ### Features  
 - EEG-based diagnosis for 5 conditions  
 - Interactive visualizations & secure reports  
-- Emotional support chatbot & self-care tips  
+- Emotional support chatbot & self-care tips
+  
+![Preview](NeurotiQ.png)
+![Preview](Team_NeurotiQ.png)
+
 
 ### ⚙️ Setup  
 ```bash
