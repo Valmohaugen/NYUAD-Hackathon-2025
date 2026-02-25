@@ -41,15 +41,15 @@ NYUAD-Hackathon-2025/
     EEG.machinelearing_data_BRMH.csv
     Anxiety_split/                    # PCA-reduced train/test splits (.npy)
     ADHD_in_children_dataset/         # ADHD EEG recordings (.mat)
-  Recommendation_System/              # Streamlit web app
+  Recommendation System/              # Streamlit web app
     Recommendation_System.py
     requirements.txt
   docs/                               # Internal hackathon docs
     To_Do.md
     Resources.md
   NeurotiQ.png
-  Team_NeurotiQ.png
-  NYUAD-QC-Hackathon-NeurotiQ-Presentation.pdf
+  NeurotiQ_team.png
+  NeurotiQ Presentation.pdf
 ```
 
 ## How to Use This Repository
@@ -77,7 +77,7 @@ Run the Streamlit app (requires an OpenAI API key):
 
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
-cd Recommendation_System
+cd "Recommendation System"
 streamlit run Recommendation_System.py
 ```
 
