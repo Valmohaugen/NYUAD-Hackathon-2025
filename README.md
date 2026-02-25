@@ -1,59 +1,105 @@
-# NYUAD Hackathon 2025: NeurotiQ - Quantum ML for EEG Analysis
+# NYUAD Hackathon 2025: NeurotiQ
 
-This repository is the home for NeurotiQ, a quantum machine learning pipeline for EEG-based anxiety and depression detection, combining QSVM/QNN benchmarking with noise-aware evaluation and an accompanying web app for interactive analysis.
+This repository is the home for NeurotiQ, a quantum machine learning pipeline for EEG-based mental health diagnosis, combining QSVM and QCNN models with classical baselines and a GPT-4-powered Streamlit web app for interactive brain wave analysis.
 
 ## Features
-- **Quantum Machine Learning Models:** QSVM (main), QNN (benchmark), classical SVM & logistic regression baselines.
-- **EEG Data Analysis:** Quantum and classical models for depression and anxiety detection.
-- **Noise & Fidelity Characterization:** Analyze hardware-induced noise, decoherence, and gate errors, visualizing their impact on EEG-based diagnosis.
-- **Machine Learning Verification:** Classify and verify EEG signals using SVM, logistic regression, and quantum models.
-- **Entropy Extraction & Postprocessing:** Clean and extract high-entropy features for robust diagnosis.
-- **Real-World Benchmarking:** Apply quantum models to real EEG datasets and compare with classical approaches.
-- **Data Generation & Analysis:** Generate, process, and analyze EEG datasets, with scripts and notebooks for reproducibility.
 
-## Project Stages
-1. **DataGeneration:** Generate EEG datasets and preprocess for quantum/classical models.
-2. **Stage1:** Implement and test quantum/classical ML algorithms (QSVM, QNN, SVM, Logistic Regression).
-3. **Stage2:** Train and evaluate classifiers for anxiety and depression detection.
-4. **Stage3:** Analyze noise, fidelity, and quantum hardware effects on EEG analysis.
-5. **Stage4:** Extract entropy and postprocess features for improved diagnosis.
-6. **Stage5:** Final classification, benchmarking, and verification.
+- **Quantum Support Vector Machine (QSVM):**
+  Qiskit-based quantum kernel SVM with amplitude embedding and diagonal phase encoding for anxiety and depression classification from EEG data. Achieves 79% AUC on anxiety detection.
 
-## Results
-| Model             | Anxiety (AUC/Accuracy) | Depression (AUC/Accuracy) |
-|-------------------|------------------------|---------------------------|
-| Classical         | 68% / 38%              | 68% / 69%                 |
-| **Quantum QSVM**  | **79% / 81%**          | **73% / 70%**             |
+- **Quantum Convolutional Neural Network (QCNN):**
+  PennyLane + TensorFlow hybrid QCNN using StronglyEntanglingLayers for EEG-based diagnosis benchmarking.
 
-## Datasets
-1. [Anxiety EEG Dataset](https://www.kaggle.com/datasets/danielesayuriono/eeg-signals-for-anxiety-levels-detection)
-2. [Depression EEG Dataset](https://zenodo.org/records/13690792)
+- **Classical ML Baselines:**
+  SVM, logistic regression, and AutoML (PyCaret) ensemble methods for comparison against quantum approaches.
 
-## Web App
-**Brain Waves Analyzer App:** [neurotiq.vercel.app](https://neurotiq.vercel.app/)
-AI-powered mental health analysis with GPT-4 integration.
+- **Brain Wave Analyzer App:**
+  Streamlit web app with GPT-4 integration for interactive EEG analysis, personalized recommendations, severity classification, and an emotional support chatbot.
 
-### Web App Features
-- EEG-based diagnosis for 5 conditions
-- Interactive visualizations & secure reports
-- Emotional support chatbot & self-care tips
+- **Multiple EEG Datasets:**
+  Anxiety, depression, and ADHD datasets with preprocessing pipelines (KNN imputation, PCA dimensionality reduction, L2 normalization).
+
+## Project Structure
+
+```
+NYUAD-Hackathon-2025/
+  README.md
+  requirements.txt                    # All project dependencies
+  .gitignore
+  ClassicalML/                        # Classical ML baseline notebooks
+    Anxiety_Detection_classical_model_01.ipynb
+    Anxiety_Detection_classical_model_02.ipynb
+  QML/                                # Quantum ML notebooks
+    QSVMAnxiety.ipynb                 # QSVM for anxiety detection (main model)
+    QSVMdepression.ipynb              # QSVM for depression detection
+    QCNNanxiety.ipynb                 # QCNN for anxiety detection
+    QCNNdepression.ipynb              # QCNN for depression detection
+    svm_model.pkl                     # Trained QSVM model
+  Datasets/                           # EEG datasets
+    Anxiety_DataSet_EEG.xlsx
+    Depression_DataSet_EEG.csv
+    EEG.machinelearing_data_BRMH.csv
+    Anxiety_split/                    # PCA-reduced train/test splits (.npy)
+    ADHD_in_children_dataset/         # ADHD EEG recordings (.mat)
+  Recommendation_System/              # Streamlit web app
+    Recommendation_System.py
+    requirements.txt
+  docs/                               # Internal hackathon docs
+    To_Do.md
+    Resources.md
+  NeurotiQ.png
+  Team_NeurotiQ.png
+  NYUAD-QC-Hackathon-NeurotiQ-Presentation.pdf
+```
 
 ## How to Use This Repository
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Valmohaugen/NYUAD-Hackathon-2025.git
-   cd NYUAD-Hackathon-2025
-   ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run the app:**
-   ```bash
-   streamlit run disease_checker_app1.py
-   ```
-4. **Explore notebooks and scripts:**
-   - Use Jupyter Notebook or VS Code to run `.ipynb` files and Python scripts in each stage.
 
-5. **Dependencies:**
-   - Python 3.10+, Streamlit, NumPy, Pandas, scikit-learn, and quantum libraries used by the QSVM/QNN pipeline (see `requirements.txt`).
+Clone the repository:
+
+```bash
+git clone https://github.com/Valmohaugen/NYUAD-Hackathon-2025.git
+cd NYUAD-Hackathon-2025
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the quantum ML notebooks:
+
+```bash
+jupyter notebook QML/QSVMAnxiety.ipynb
+```
+
+Run the Streamlit app (requires an OpenAI API key):
+
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+cd Recommendation_System
+streamlit run Recommendation_System.py
+```
+
+Or visit the deployed version: [neurotiq.vercel.app](https://neurotiq.vercel.app/)
+
+## Results
+
+| Model            | Anxiety (AUC / Accuracy) | Depression (AUC / Accuracy) |
+|------------------|--------------------------|------------------------------|
+| Classical SVM    | 68% / 38%                | 68% / 69%                    |
+| **Quantum QSVM** | **79% / 81%**           | **73% / 70%**                |
+
+## Datasets
+
+| Dataset | Source | Used For |
+|---------|--------|----------|
+| Anxiety EEG | [Kaggle](https://www.kaggle.com/datasets/danielesayuriono/eeg-signals-for-anxiety-levels-detection) | QSVM/QCNN anxiety classification |
+| Depression EEG | [Zenodo](https://zenodo.org/records/13690792) | QSVM/QCNN depression classification |
+| ADHD EEG | Included in `Datasets/ADHD_in_children_dataset/` | Future work |
+
+## Dependencies
+
+Python 3.10+, PennyLane, Qiskit, qiskit-aer, TensorFlow, scikit-learn, XGBoost, NumPy, Pandas, SciPy, Matplotlib, Streamlit, LangChain, OpenAI, Altair
+
+See `requirements.txt` for the full list.

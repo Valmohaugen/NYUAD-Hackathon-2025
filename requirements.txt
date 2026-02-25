@@ -1,0 +1,24 @@
+# Quantum ML
+pennylane
+qiskit>=1.0
+qiskit-aer
+
+# ML / Deep Learning
+tensorflow
+scikit-learn
+xgboost
+
+# Data / Scientific
+numpy
+pandas
+scipy
+matplotlib
+openpyxl
+
+# Streamlit app
+streamlit
+altair
+langchain
+langchain-openai
+openai
+python-dotenv

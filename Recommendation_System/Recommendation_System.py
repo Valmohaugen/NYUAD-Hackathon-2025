@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain.prompts import PromptTemplate
-from langchain_openai import OpenAI, ChatOpenAI
+from langchain_openai import ChatOpenAI
 import os
 import random
 import pandas as pd
@@ -8,6 +8,9 @@ import altair as alt
 
 # Load OpenAI API key from environment variables
 openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    st.error("Missing OPENAI_API_KEY environment variable. Set it with: export OPENAI_API_KEY='your-key'")
+    st.stop()
 
 # Initialize the OpenAI Chat model
 llm = ChatOpenAI(temperature=0.4, openai_api_key=openai_api_key, model="gpt-4o", max_tokens=3000)
@@ -149,7 +152,7 @@ def generate_test_data():
 
 def get_model_output():
     """Simulate model output (can be updated with real model predictions)."""
-    # Uncomment below to use random generated data
+    data = generate_test_data()
     return {
         "normal": data[0],
         "depression": data[1],
@@ -157,13 +160,6 @@ def get_model_output():
         "schizophrenia": data[3],
         "adhd": data[4]
     }
-    # return {
-    #     "normal": 60,
-    #     "depression": 40,
-    #     "anxiety": 0,
-    #     "schizophrenia": 0,
-    #     "adhd": 0
-    # }
 
 def dynamic_recommendations(summary_text):
     """Generate dynamic self-care tips based on user analysis."""

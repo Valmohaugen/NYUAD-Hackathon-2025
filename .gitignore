@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models and data (prevent future additions)
+*.pkl
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.mat
+*.pth
+*.joblib
+
+# Environment
+.env
+*.log
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
